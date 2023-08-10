@@ -1,0 +1,210 @@
+<%-- any content can be specified here e.g.: --%>
+<%@page import="org.json.JSONObject"%>
+<%@page import="org.json.JSONArray"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.Connection"%>
+
+<%@ page pageEncoding="UTF-8" %>
+<nav class="pcoded-navbar">
+    <div class="pcoded-inner-navbar main-menu">
+
+        <div class="pcoded-navigatio-lavel">Navigation</div>
+
+
+        <div class="pcoded-navigatio-lavel">Navigation</div>
+        <ul class="pcoded-item pcoded-left-item">
+            <li class="">
+                <a href="index">
+                    <span class="pcoded-micon"><i class="feather icon-home"></i></span>
+                    <span class="pcoded-mtext">Dashboard</span>
+                </a>
+            </li>
+        </ul>
+        <div class="pcoded-navigatio-lavel">Section 2</div>
+        <ul class="pcoded-item pcoded-left-item"  >
+            <li class="pcoded-hasmenu" >
+                <a href="javascript:void(0)">
+                    <span class="pcoded-micon"><i class="feather icon-users"></i></span>
+                    <span class="pcoded-mtext">Credit Appraisal</span>
+                </a>
+                <ul class="pcoded-submenu">
+                    <li class="">
+                        <a href="customer">
+                            <span class="pcoded-mtext">Basic Details</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="customer-financial">
+                            <span class="pcoded-mtext">Financial</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="proposal">
+                            <span class="pcoded-mtext">Proposal</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="proposal-approved">
+                            <span class="pcoded-mtext">Approved Proposal</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="Risk_Report">
+                            <span class="pcoded-mtext">Obtain Risk Report</span>
+                        </a>
+                    </li>
+
+
+                </ul>
+            </li>
+
+            <li class="pcoded-hasmenu"  >
+                <a href="javascript:void(0)">
+                    <span class="pcoded-micon"><i class="feather icon-list"></i></span>
+                    <span class="pcoded-mtext">Limit Setup</span>
+                </a>
+                <ul class="pcoded-submenu">
+                    <li class="">
+                        <a href="limit">
+                            <span class="pcoded-mtext">Customer Limit</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="delegated-authority">
+                            <span class="pcoded-mtext">Delegated Authority</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="pcoded-hasmenu"  >
+                <a href="javascript:void(0)">
+                    <span class="pcoded-micon"><i class="feather icon-check"></i></span>
+                    <span class="pcoded-mtext">Approval</span>
+                </a>
+                <ul class="pcoded-submenu">
+                    <li class="">
+                        <a href="approve-customer">
+                            <span class="pcoded-mtext">Customer</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="approve-limit_">
+                            <span class="pcoded-mtext">Customer Limit</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="approve-proposal">
+                            <span class="pcoded-mtext">Proposal</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="approve-da">
+                            <span class="pcoded-mtext">Delegated Authority</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="pcoded-hasmenu"  >
+                <a href="javascript:void(0)">
+                    <span class="pcoded-micon"><i class="feather icon-list"></i></span>
+                    <span class="pcoded-mtext">LC</span>
+                </a>
+                <ul class="pcoded-submenu">
+                    <li class="">
+                        <a href="lc-hnb">
+                            <span class="pcoded-mtext">LC - HNB</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="pcoded-hasmenu" >
+                <a href="javascript:void(0)">
+                    <span class="pcoded-micon"><i class="feather icon-settings"></i></span>
+                    <span class="pcoded-mtext">Admin</span>
+                </a>
+                <ul class="pcoded-submenu">
+                    <li class="">
+                        <a href="product">
+                            <span class="pcoded-mtext">Product</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="client_type">
+                            <span class="pcoded-mtext">Client Type</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="nationality">
+                            <span class="pcoded-mtext">Nationality</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="Residential_Status">
+                            <span class="pcoded-mtext">Residential Status</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="Title">
+                            <span class="pcoded-mtext">Title</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="Gender">
+                            <span class="pcoded-mtext">Gender</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="Marital_Status">
+                            <span class="pcoded-mtext">Marital Status</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="Transaction">
+                            <span class="pcoded-mtext">Transaction</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="Branch">
+                            <span class="pcoded-mtext">Branch</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="Financial_Institute">
+                            <span class="pcoded-mtext">Financial Institute</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="Proposal_Req_Type">
+                            <span class="pcoded-mtext">Proposal Request Type</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="Marketing_Officer">
+                            <span class="pcoded-mtext">Marketing Officer</span>
+                        </a>
+                    </li>
+                    <li class="pcoded-hasmenu"   >
+                        <a href="javascript:void(0)">
+                            <span class="pcoded-micon"><i class="feather icon-settings"></i></span>
+                            <span class="pcoded-mtext">Risk Rating</span>
+                        </a>
+                        <ul class="pcoded-submenu">
+                            <li class="">
+                                <a href="Risk_Rating">
+                                    <span class="pcoded-mtext">Criteria</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="risk_set">
+                                    <span class="pcoded-mtext">Set Risk Rating</span>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul> 
+
+    </div>
+</nav>

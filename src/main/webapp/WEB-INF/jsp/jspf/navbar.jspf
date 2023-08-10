@@ -1,0 +1,73 @@
+<%@ page pageEncoding="UTF-8" %>
+<nav class="navbar header-navbar pcoded-header">
+    <div class="navbar-wrapper">
+        <div class="navbar-logo">
+            <a class="mobile-menu" id="mobile-collapse" href="javascript:void(0)">
+                <i class="feather icon-menu"></i>
+            </a>
+            <a href="index.html">
+                <img class="img-fluid" src="files/images/fintrex-din-white.png" alt="fintrex DropInNet">
+            </a>
+            <a class="mobile-options">
+                <i class="feather icon-more-horizontal"></i>
+            </a>
+        </div>
+        <div class="navbar-container container-fluid">
+            <ul class="nav-left">
+                <li class="header-search">
+                    <div class="main-search morphsearch-search">
+                        <div class="input-group">
+                            <span class="input-group-addon search-close"><i class="feather icon-x"></i></span>
+                            <input type="text" class="form-control" id="searchBar">
+                            <span class="input-group-addon search-btn"><i class="feather icon-search"></i></span>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="javascript:void(0)" onclick="javascript:toggleFullScreen()">
+                        <i class="feather icon-maximize full-screen"></i>
+                    </a>
+                </li>
+            </ul>
+            <%                //if (!Db.isLive) {
+            %>
+            <ul class="nav-left">
+                <li>
+                    <!--<h4 class="text-danger m-t-20"> **UAT** </h4>-->
+                    <i class='fas fa-comments' style='font-size:20px; margin-top: 18px;'></i>
+                </li>
+            </ul>
+            <%
+                //}
+            %>
+            <ul class="nav-right">
+                <li class="user-profile header-notification">
+                    <div class="dropdown-primary dropdown">
+                        <div class="dropdown-toggle" data-toggle="dropdown">
+                            <img src="files/images/user.png" class="img-radius" alt="My Photo">
+                            <span><%=session.getAttribute("username")%></span>
+                            <i class="feather icon-chevron-down"></i>
+                        </div>
+                        <ul class="show-notification profile-notification dropdown-menu" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+                            <li>
+                                <a href="#">
+                                    <i class="feather icon-settings"></i> Settings
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="feather icon-user"></i> Profile
+                                </a>
+                            </li>
+                            <li>
+                                <a href="logout">
+                                    <i class="feather icon-log-out"></i> Logout
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

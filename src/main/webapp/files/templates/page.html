@@ -1,0 +1,72 @@
+<div class="row" id="detailSection" style="display: none">
+    <div class="col-lg-8 col-sm-12 offset-lg-2">
+        <div class="card">
+            <div class="card-header">
+                <div class="card-header-right">
+                    <ul class="list-unstyled card-option">
+                        <li><i class="feather icon-maximize full-card"></i></li>
+                        <li><i class="feather icon-x cls-card"></i></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card-block">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <ul class="nav nav-tabs  tabs" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-toggle="tab" id="detailTab" href="#detail" role="tab"><i class="feather icon-plus"></i> Add/Edit <span id="header2"></span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" id="auditTab" href="#history" role="tab"><i class="feather icon-clock"></i> Audit</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content tabs card-block">
+                            <div class="tab-pane active" id="detail"  role="tabpanel">
+                                <div class="row" id="fields">
+
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="history" role="tabpanel">
+                                <div class="row">
+                                    <div class="col-lg-8 offset-lg-2 col-md-12" id="historyRow">
+                                    </div>
+                                    <div class="col-lg-8 offset-lg-2 col-md-12" id="historyDetail" style="display: none">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-sm btn-primary pull-right " id="saveBtn">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row" id="tableSection">
+    <div class="col-sm-12">
+        <div class="card">
+            <div class="card-header">
+                <h5 id="cardHeader"></h5>
+                <div class="card-header-right">
+                    <ul class="list-unstyled card-option">
+                        <li><i class="feather icon-maximize full-card"></i></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card-block">
+                <table class="table table-bordered" id="maintable">
+                    <thead>
+                        <tr>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-sm btn-danger pull-right " id="addBtn">+ Add</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,65 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jan 21, 2020, 9:08:13 AM
+    Author     : Sahanc
+*/
+
+@media print {
+  footer {page-break-after: always;}
+}
+
+
+.table.tab-sm td,
+.table.tab-sm th {
+    padding: .2rem 0.2rem
+       
+ 
+}
+
+
+.table.tab-ane td,
+.table.tab-ane th {
+    padding: .4rem 0.2rem
+       
+ 
+}
+
+
+.table.tab-ls td,
+.table.tab-ls th {
+
+  padding: .50rem 50rem
+}
+
+.headerfontnewup
+{
+     font-size: 30;
+     font-family: Corbel;
+    
+}
+
+.table.tab-updatedsm1 td,
+.table.tab-updatedsm1 th {
+    padding: .1rem 0.2rem
+       
+ 
+}
+hr { 
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 1px;
+} 
+.btn-bbbsm {
+    padding: 8px 14px;
+    line-height: 20px;
+   
+    font-size: 15px
+}
